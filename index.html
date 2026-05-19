@@ -73,6 +73,15 @@
   .badge-row { display: -webkit-flex; display: flex; gap: 10px; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: center; justify-content: center; margin-bottom: 44px; }
   .badge { background: rgba(255,255,255,0.13); border: 1px solid rgba(255,255,255,0.22); border-radius: 100px; padding: 7px 18px; font-size: 13px; font-weight: 500; }
 
+  /* ── FÜR WEN ── */
+  .fuerwen { padding: 72px 20px; background: var(--white); }
+  .fuerwen-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+  .fuerwen-grid { display: -webkit-flex; display: flex; gap: 24px; margin-top: 32px; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+  .fuerwen-card { -webkit-flex: 1; flex: 1; min-width: 280px; background: var(--red-bg); border: 1px solid #f5c6c9; border-radius: 20px; padding: 32px 28px; text-align: left; }
+  .fuerwen-icon { font-size: 32px; display: block; margin-bottom: 16px; }
+  .fuerwen-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--black); }
+  .fuerwen-card p { font-size: 15px; color: var(--gray); line-height: 1.7; }
+
   /* Store buttons */
   .store-buttons { display: -webkit-flex; display: flex; gap: 14px; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: center; justify-content: center; margin-bottom: 48px; }
   .store-btn {
@@ -319,9 +328,32 @@
   </div>
 </section>
 
+<!-- FÜR WEN -->
+<section class="fuerwen">
+  <div class="fuerwen-inner">
+    <p class="section-label">Für wen?</p>
+    <div class="fuerwen-grid">
+      <div class="fuerwen-card">
+        <span class="fuerwen-icon">🚪</span>
+        <h3>Du willst raus?</h3>
+        <p>Wer einem Vermieter einen zumutbaren Nachmieter stellt, darf die Wohnung sofort verlassen — unabhängig vom nächsten Kündigungstermin. Art. 264 OR macht es möglich. ExpressWohnung macht es einfach: Inserat aufgeben, Nachmieter finden, frei sein.</p>
+      </div>
+      <div class="fuerwen-card">
+        <span class="fuerwen-icon">🔍</span>
+        <h3>Du suchst?</h3>
+        <p>Auf anderen Plattformen sind Wohnungen oft schon vergeben bevor man überhaupt antwortet. Hier nicht: Jedes Inserat wird nach 72 Stunden automatisch gelöscht. Keine veralteten Anzeigen — nur echte, aktuelle Chancen auf eine Wohnung die wirklich noch frei ist.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- STATS -->
 <section class="stats">
   <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-num" id="inserate-count">–</div>
+      <div class="stat-label">Inserate gerade online</div>
+    </div>
     <div class="stat">
       <div class="stat-num">72h</div>
       <div class="stat-label">Maximale Laufzeit pro Inserat</div>
@@ -333,10 +365,6 @@
     <div class="stat">
       <div class="stat-num">0.-</div>
       <div class="stat-label">Kosten für Inserenten</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">§264</div>
-      <div class="stat-label">Legal ausserterminlich kündigen</div>
     </div>
   </div>
 </section>
@@ -360,27 +388,17 @@
 <!-- FEATURES -->
 <section class="features" id="features">
   <p class="section-label">Funktionen</p>
-  <h2 class="section-title">Warum ExpressWohnung?</h2>
+  <h2 class="section-title">Frei. Schnell. Direkt.</h2>
   <div class="feature-grid">
-    <div class="feature-card">
-      <span class="feature-icon">⚡</span>
-      <h3>72-Stunden-Inserate</h3>
-      <p>Nur brandaktuelle Inserate — 72h online. De Schneller isch de Gschwinder.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🏠</span>
-      <h3>Spezialisiert</h3>
-      <p>Die einzige App ausschliesslich für ausserterminliche Wohnungsvermittlung — fokussiert, ohne Umwege.</p>
-    </div>
     <div class="feature-card">
       <span class="feature-icon">🇨🇭</span>
       <h3>Alle 26 Kantone</h3>
-      <p>Von Zürich bis Genf, von Basel bis Tessin. Filtern Sie gezielt nach Kanton und finden Sie schnell was Sie suchen.</p>
+      <p>Von Zürich bis Genf, von Basel bis Tessin. Filtere gezielt nach Kanton und finde schnell was du suchst.</p>
     </div>
     <div class="feature-card">
       <span class="feature-icon">📸</span>
       <h3>Mit Fotos</h3>
-      <p>Laden Sie bis zu 6 Fotos hoch. Alle Bilder werden automatisch per KI auf unangemessene Inhalte geprüft und bei Verstoss sofort gelöscht.</p>
+      <p>Lade bis zu 6 Fotos hoch. Alle Bilder werden automatisch per KI auf unangemessene Inhalte geprüft und bei Verstoss sofort gelöscht.</p>
     </div>
     <div class="feature-card">
       <span class="feature-icon">✉️</span>
@@ -416,7 +434,7 @@
       <div class="step-num">2</div>
       <div class="step-body">
         <h3>Inserat aufgeben</h3>
-        <p>Wählen Sie «Wohnung anbieten» oder «Wohnung suchen», fügen Sie Details, Fotos und Verfügbarkeitsdatum hinzu.</p>
+        <p>Wähle «Wohnung anbieten» oder «Wohnung suchen», füge Details, Fotos und Verfügbarkeitsdatum hinzu.</p>
       </div>
     </div>
     <div class="step">
@@ -430,7 +448,7 @@
       <div class="step-num">4</div>
       <div class="step-body">
         <h3>Kontakt & Umzug</h3>
-        <p>Interessenten melden sich direkt per E-Mail. Sie entscheiden, vereinbaren Besichtigungen und ziehen ausserterminlich um.</p>
+        <p>Interessenten melden sich direkt per E-Mail. Du entscheidest, vereinbarst Besichtigungen und ziehst ausserterminlich um.</p>
       </div>
     </div>
   </div>
@@ -451,7 +469,7 @@
   <div class="contact-inner">
     <p class="section-label">Kontakt</p>
     <h2 class="section-title">Fragen? Wir helfen.</h2>
-    <p>Bei Fragen zur App, zum Datenschutz oder zur Zusammenarbeit stehen wir gerne zur Verfügung.</p>
+    <p>Bei Fragen zur App, zum Datenschutz oder zur Zusammenarbeit — meld dich einfach.</p>
     <a href="mailto:info@expresswohnung.ch" class="contact-email">
       ✉️ &nbsp; info@expresswohnung.ch
     </a>
@@ -475,6 +493,23 @@
   <p class="footer-copy">&copy; 2026 ExpressWohnung. Alle Rechte vorbehalten.</p>
 </footer>
 
+<script>
+fetch('https://urtmryplegvnaqkjffzd.supabase.co/rest/v1/inserate?select=id&laeuft_ab=gte.' + new Date().toISOString(), {
+  headers: {
+    'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVydG1yeXBsZWd2bmFxa2pmZnpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQxMjgxNDAsImV4cCI6MjA4OTcwNDE0MH0.JdMrCPAjT-WSaKbCG2oUGz9eMWeCpPfaIpK8bpdJdrk',
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVydG1yeXBsZWd2bmFxa2pmZnpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQxMjgxNDAsImV4cCI6MjA4OTcwNDE0MH0.JdMrCPAjT-WSaKbCG2oUGz9eMWeCpPfaIpK8bpdJdrk',
+    'Prefer': 'count=exact'
+  }
+})
+.then(function(r) {
+  var range = r.headers.get('content-range');
+  var count = range ? range.split('/')[1] : null;
+  if (count !== null && count !== '*') {
+    document.getElementById('inserate-count').textContent = count;
+  }
+})
+.catch(function() {});
+</script>
 
 </body>
 </html>
