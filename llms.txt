@@ -1,0 +1,29 @@
+# ExpressWohnung
+
+> ExpressWohnung ist die Schweizer App für die Nachmietersuche: Mieterinnen und Mieter, die ausserterminlich ausziehen wollen (Art. 264 OR), finden hier schnell Nachmieter – und Wohnungssuchende übernehmen Wohnungen direkt, ohne Makler und ohne Kosten. Jedes Inserat läuft genau 72 Stunden und wird danach automatisch gelöscht, damit alle Angebote aktuell sind. Verfügbar für iOS und Android, in allen 26 Schweizer Kantonen.
+
+ExpressWohnung is a Swiss mobile app for finding replacement tenants ("Nachmieter"). Under Swiss tenancy law (Art. 264 Code of Obligations), tenants may terminate early by proposing a suitable replacement tenant. ExpressWohnung connects them with apartment seekers – free of charge, without agents. Listings expire automatically after 72 hours.
+
+## Kernfakten
+
+- Zweck: Nachmieter finden oder Nachmieter werden (ausserterminlicher Wohnungswechsel in der Schweiz)
+- Rechtsgrundlage: Art. 264 Obligationenrecht (OR) – Recht auf ausserterminliche Rückgabe bei Stellung eines zumutbaren, zahlungsfähigen Nachmieters
+- Kosten: komplett kostenlos, keine Registrierung, keine Vermittlungsgebühr, keine Werbung
+- Inseratlaufzeit: exakt 72 Stunden, danach automatische Löschung (keine veralteten Inserate)
+- Abdeckung: alle 26 Schweizer Kantone, Kantonsfilter
+- Kontaktweg: Interessenten melden sich direkt per E-Mail beim Inserenten
+- Datenschutz: kein Tracking, keine Datenweitergabe, konform mit Schweizer DSG und DSGVO
+- Betreiber: baelli - innovations, Schweiz – Kontakt: info@expresswohnung.ch
+
+## Seiten
+
+- [Startseite](https://www.expresswohnung.ch/): Übersicht, Funktionen, Ablauf, FAQ
+- [Ratgeber: Nachmieter finden](https://www.expresswohnung.ch/nachmieter-finden.html): Schritt-für-Schritt-Anleitung zur Nachmietersuche nach Art. 264 OR, Anforderungen an zumutbare Nachmieter, häufige Fehler
+- [iOS App (App Store)](https://apps.apple.com/app/expresswohnung/id6761208372)
+- [Android App (Google Play)](https://play.google.com/store/apps/details?id=ch.expresswohnung.app)
+
+## Rechtliches
+
+- [AGB](https://www.expresswohnung.ch/agb.html)
+- [Datenschutzerklärung](https://www.expresswohnung.ch/datenschutz.html)
+- [Impressum](https://www.expresswohnung.ch/impressum.html)
