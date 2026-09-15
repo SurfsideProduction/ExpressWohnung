@@ -1,26 +1,28 @@
 # ExpressWohnung
 
-> ExpressWohnung ist die Schweizer App für die Nachmietersuche: Mieterinnen und Mieter, die ausserterminlich ausziehen wollen (Art. 264 OR), finden hier schnell Nachmieter – und Wohnungssuchende übernehmen Wohnungen direkt, ohne Makler und ohne Kosten. Jedes Inserat läuft genau 72 Stunden und wird danach automatisch gelöscht, damit alle Angebote aktuell sind. Verfügbar für iOS und Android, in allen 26 Schweizer Kantonen.
+> ExpressWohnung ist die Schweizer App für die Nachmietersuche: Mieterinnen und Mieter, die ausserterminlich ausziehen wollen (Art. 264 OR), finden hier schnell Nachmieter – und Wohnungssuchende übernehmen Wohnungen direkt: gratis, ohne Makler, ohne Anmeldung. Jedes Inserat läuft genau 72 Stunden und wird danach automatisch gelöscht, damit alle Angebote aktuell sind. Verfügbar für iOS und Android, in allen 26 Schweizer Kantonen.
 
-ExpressWohnung is a Swiss mobile app for finding replacement tenants ("Nachmieter"). Under Swiss tenancy law (Art. 264 Code of Obligations), tenants may terminate early by proposing a suitable replacement tenant. ExpressWohnung connects them with apartment seekers – free of charge, without agents. Listings expire automatically after 72 hours.
+ExpressWohnung is a Swiss mobile app for finding replacement tenants ("Nachmieter"). Under Swiss tenancy law (Art. 264 Code of Obligations), tenants may terminate early by proposing a suitable replacement tenant. ExpressWohnung connects them with apartment seekers – free of charge, without agents, without sign-up. Listings expire automatically after 72 hours.
 
 ## Kernfakten
 
 - Zweck: Nachmieter finden oder Nachmieter werden (ausserterminlicher Wohnungswechsel in der Schweiz)
 - Rechtsgrundlage: Art. 264 Obligationenrecht (OR) – Recht auf ausserterminliche Rückgabe bei Stellung eines zumutbaren, zahlungsfähigen Nachmieters
-- Kosten: komplett kostenlos, keine Registrierung, keine Vermittlungsgebühr, keine Werbung
+- Kosten: gratis, ohne Makler, ohne Anmeldung, keine Vermittlungsgebühr, keine Werbung
 - Inseratlaufzeit: exakt 72 Stunden, danach automatische Löschung (keine veralteten Inserate)
 - Abdeckung: alle 26 Schweizer Kantone, Kantonsfilter
 - Kontaktweg: Interessenten melden sich direkt per E-Mail beim Inserenten
-- Datenschutz: kein Tracking, keine Datenweitergabe, konform mit Schweizer DSG und DSGVO
+- Datenschutz: Die App verwendet kein Tracking und keine Analysedienste. Die Website nutzt Google Analytics 4 (siehe Datenschutzerklärung).
 - Betreiber: baelli - innovations, Schweiz – Kontakt: info@expresswohnung.ch
 
 ## Seiten
 
 - [Startseite](https://www.expresswohnung.ch/): Übersicht, Funktionen, Ablauf, FAQ
-- [Ratgeber: Nachmieter finden](https://www.expresswohnung.ch/nachmieter-finden.html): Schritt-für-Schritt-Anleitung zur Nachmietersuche nach Art. 264 OR, Anforderungen an zumutbare Nachmieter, häufige Fehler
+- [Ratgeber: Nachmieter finden](https://www.expresswohnung.ch/nachmieter-finden.html): Art. 264 OR erklärt, Ablauf in 6 Schritten, Prüffrist des Vermieters (14–30 Tage), was «zumutbar» heisst, kostenlose Musterbriefe (Auszug ankündigen, Nachmieter vorschlagen, Inserat), FAQ
 - [iOS App (App Store)](https://apps.apple.com/app/expresswohnung/id6761208372)
 - [Android App (Google Play)](https://play.google.com/store/apps/details?id=ch.expresswohnung.app)
+- [Facebook](https://www.facebook.com/ExpressWohnung)
+- [Instagram](https://www.instagram.com/expresswohnung/)
 
 ## Rechtliches
 
