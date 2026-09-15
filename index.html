@@ -370,6 +370,24 @@
     .hero-qr { flex-direction: column; text-align: center; }
     .hero-qr-text { text-align: center; }
   }
+
+  /* Menü «Hilfe & Werkzeuge» (15.09.2026) */
+  [hidden] { display: none !important; }
+  .nav-dd { position: relative; display: flex; align-items: center; }
+  .nav-dd-btn { background: none; border: 0; font: inherit; font-size: 14px; line-height: inherit; font-weight: 500; color: rgba(255,255,255,0.85); cursor: pointer; padding: 0; display: flex; align-items: center; gap: 4px; }
+  .nav-dd-btn:hover, .nav-dd-btn[aria-expanded="true"] { color: white; }
+  .nav-dd-btn svg { width: 12px; height: 12px; fill: currentColor; }
+  .nav-dd-menu { position: absolute; top: calc(100% + 14px); right: 0; min-width: 250px; background: white; border-radius: 14px; box-shadow: 0 14px 40px rgba(0,0,0,0.18); padding: 8px; display: flex; flex-direction: column; }
+  .nav-links .nav-dd-menu a { color: #0D0D0D; font-size: 15px; font-weight: 600; padding: 10px 12px; border-radius: 10px; text-decoration: none; }
+  .nav-links .nav-dd-menu a small { display: block; font-size: 12px; font-weight: 400; color: #5A5A6A; }
+  .nav-links .nav-dd-menu a:hover { background: #FFF5F5; color: #A50E1E; }
+  .nav-burger { display: none; background: none; border: 0; color: white; cursor: pointer; padding: 6px; }
+  .nav-burger svg { width: 26px; height: 26px; fill: currentColor; display: block; }
+  .nav-mobile { position: absolute; top: 100%; left: 0; right: 0; background: white; box-shadow: 0 16px 30px rgba(0,0,0,0.18); padding: 8px 16px 16px; display: flex; flex-direction: column; }
+  .nav-mobile a { color: #0D0D0D; text-decoration: none; font-size: 16px; font-weight: 600; padding: 12px 4px; border-bottom: 1px solid #E4E4E8; }
+  .nav-mobile a:last-child { border-bottom: 0; }
+  .nav-mobile .nm-head { font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #A50E1E; padding: 14px 4px 2px; }
+  @media (max-width: 640px) { .nav-burger { display: block; } }
 </style>
 </head>
 <body>
@@ -383,10 +401,13 @@
   <div class="nav-links">
     <a href="#features">Funktionen</a>
     <a href="#how">So funktionierts</a>
-    <a href="nachmieter-finden.html">Ratgeber</a>
+    <div class="nav-dd"><button type="button" class="nav-dd-btn" aria-expanded="false" aria-haspopup="true">Hilfe &amp; Werkzeuge <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg></button><div class="nav-dd-menu" hidden><a href="nachmieter-finden.html">Ratgeber: Nachmieter finden<small>Rechte und Ablauf nach Art. 264 OR</small></a><a href="nachmieter-finden.html#vorlagen">Musterbriefe gratis<small>Kündigung, Nachmieter-Vorschlag, Inserat</small></a><a href="kuendigungstermin-rechner.html">Doppelmiete-Rechner<small>Was kostet dich ein verpasster Termin?</small></a></div></div>
     <a href="#faq">FAQ</a>
     <a href="mailto:info@expresswohnung.ch" class="nav-cta">Kontakt</a>
   </div>
+
+  <button type="button" class="nav-burger" aria-expanded="false" aria-controls="navMobile" aria-label="Menü öffnen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  <div class="nav-mobile" id="navMobile" hidden><div class="nm-head">Die App</div><a href="#features">Funktionen</a><a href="#how">So funktionierts</a><a href="#faq">FAQ</a><div class="nm-head">Hilfe &amp; Werkzeuge</div><a href="nachmieter-finden.html">Ratgeber: Nachmieter finden</a><a href="nachmieter-finden.html#vorlagen">Musterbriefe gratis</a><a href="kuendigungstermin-rechner.html">Doppelmiete-Rechner</a><a href="mailto:info@expresswohnung.ch">Kontakt</a></div>
 </nav>
 
 <!-- HERO -->
@@ -670,6 +691,29 @@ document.addEventListener('click', function (e) {
   else if (a.getAttribute('data-ew') === 'zur-app') n = 'ratgeber_zur_app';
   if (n) gtag('event', n, { link_position: a.getAttribute('data-pos') || '' });
 });
+</script>
+<script>
+/* Menü «Hilfe & Werkzeuge» (15.09.2026) */
+(function () {
+  var dds = document.querySelectorAll('.nav-dd');
+  dds.forEach(function (d) {
+    var b = d.querySelector('.nav-dd-btn'), m = d.querySelector('.nav-dd-menu');
+    b.addEventListener('click', function (e) { e.stopPropagation(); var auf = m.hidden; m.hidden = !auf; b.setAttribute('aria-expanded', auf ? 'true' : 'false'); });
+  });
+  document.addEventListener('click', function (e) {
+    dds.forEach(function (d) { if (!d.contains(e.target)) { d.querySelector('.nav-dd-menu').hidden = true; d.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); } });
+  });
+  var bu = document.querySelector('.nav-burger'), mo = document.getElementById('navMobile');
+  if (bu && mo) {
+    bu.addEventListener('click', function () { var auf = mo.hidden; mo.hidden = !auf; bu.setAttribute('aria-expanded', auf ? 'true' : 'false'); bu.setAttribute('aria-label', auf ? 'Menü schliessen' : 'Menü öffnen'); });
+    mo.addEventListener('click', function (e) { if (e.target.closest('a')) { mo.hidden = true; bu.setAttribute('aria-expanded', 'false'); } });
+  }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { dds.forEach(function (d) { d.querySelector('.nav-dd-menu').hidden = true; }); if (mo) mo.hidden = true; } });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('.nav-dd-menu a, .nav-mobile a') : null;
+    if (a && typeof gtag === 'function') gtag('event', 'menu_klick', { ziel: a.getAttribute('href') });
+  });
+})();
 </script>
 </body>
 </html>

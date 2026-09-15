@@ -117,6 +117,20 @@
   .result.ok .big { color: var(--green); }
   .result p { font-size: 15px; margin-bottom: 10px; }
   .result .fine { font-size: 13px; color: var(--gray); margin: 0; }
+  .vergleich { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .zeile { background: white; border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 2px; }
+  .zeile .lbl { font-size: 13px; font-weight: 700; color: var(--gray); }
+  .zeile .wert { font-size: 28px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.15; }
+  .zeile .sub { font-size: 13px; color: #333340; line-height: 1.4; }
+  .zeile.ohne .wert { color: var(--red-dark); }
+  .zeile.mit .wert { color: var(--green); }
+  .spar { text-align: center; font-size: 18px; margin: 16px 0 4px; }
+  .spar strong { color: var(--green); font-size: 22px; }
+  .cta a.cta-main { display: inline-block; background: white; color: var(--red-dark); font-weight: 800; text-decoration: none; padding: 13px 22px; border-radius: 100px; font-size: 16px; }
+  .cta p { margin: 10px 0 0; }
+  details.det { margin-top: 14px; border: 0; padding: 0; }
+  details.det summary { font-size: 14px; color: var(--gray); }
+  @media (max-width: 640px) { .vergleich { grid-template-columns: 1fr; } .zeile .wert { font-size: 26px; } }
   .timeline { list-style: none; margin: 14px 0 12px; padding: 0; border-left: 3px solid rgba(165,14,30,0.25); }
   .timeline li { position: relative; padding: 0 0 10px 16px; font-size: 15px; margin: 0; }
   .timeline li::before { content: ""; position: absolute; left: -7px; top: 8px; width: 11px; height: 11px; border-radius: 50%; background: var(--red-dark); }
@@ -161,6 +175,24 @@
     .months { grid-template-columns: repeat(4, 1fr); }
     .result .big { font-size: 26px; }
   }
+
+  /* Menü «Hilfe & Werkzeuge» (15.09.2026) */
+  [hidden] { display: none !important; }
+  .nav-dd { position: relative; display: flex; align-items: center; }
+  .nav-dd-btn { background: none; border: 0; font: inherit; font-size: 14px; line-height: inherit; font-weight: 500; color: rgba(255,255,255,0.85); cursor: pointer; padding: 0; display: flex; align-items: center; gap: 4px; }
+  .nav-dd-btn:hover, .nav-dd-btn[aria-expanded="true"] { color: white; }
+  .nav-dd-btn svg { width: 12px; height: 12px; fill: currentColor; }
+  .nav-dd-menu { position: absolute; top: calc(100% + 14px); right: 0; min-width: 250px; background: white; border-radius: 14px; box-shadow: 0 14px 40px rgba(0,0,0,0.18); padding: 8px; display: flex; flex-direction: column; }
+  .nav-links .nav-dd-menu a { color: #0D0D0D; font-size: 15px; font-weight: 600; padding: 10px 12px; border-radius: 10px; text-decoration: none; }
+  .nav-links .nav-dd-menu a small { display: block; font-size: 12px; font-weight: 400; color: #5A5A6A; }
+  .nav-links .nav-dd-menu a:hover { background: #FFF5F5; color: #A50E1E; }
+  .nav-burger { display: none; background: none; border: 0; color: white; cursor: pointer; padding: 6px; }
+  .nav-burger svg { width: 26px; height: 26px; fill: currentColor; display: block; }
+  .nav-mobile { position: absolute; top: 100%; left: 0; right: 0; background: white; box-shadow: 0 16px 30px rgba(0,0,0,0.18); padding: 8px 16px 16px; display: flex; flex-direction: column; }
+  .nav-mobile a { color: #0D0D0D; text-decoration: none; font-size: 16px; font-weight: 600; padding: 12px 4px; border-bottom: 1px solid #E4E4E8; }
+  .nav-mobile a:last-child { border-bottom: 0; }
+  .nav-mobile .nm-head { font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #A50E1E; padding: 14px 4px 2px; }
+  @media (max-width: 640px) { .nav-burger { display: block; } }
 </style>
 </head>
 <body>
@@ -171,10 +203,13 @@
     <span>ExpressWohnung</span>
   </a>
   <div class="nav-links">
-    <a href="nachmieter-finden.html">Ratgeber</a>
-    <a href="nachmieter-finden.html#vorlagen">Vorlagen</a>
+    <a href="index.html#how">So funktionierts</a>
+    <div class="nav-dd"><button type="button" class="nav-dd-btn" aria-expanded="false" aria-haspopup="true">Hilfe &amp; Werkzeuge <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg></button><div class="nav-dd-menu" hidden><a href="nachmieter-finden.html">Ratgeber: Nachmieter finden<small>Rechte und Ablauf nach Art. 264 OR</small></a><a href="nachmieter-finden.html#vorlagen">Musterbriefe gratis<small>Kündigung, Nachmieter-Vorschlag, Inserat</small></a><a href="kuendigungstermin-rechner.html">Doppelmiete-Rechner<small>Was kostet dich ein verpasster Termin?</small></a></div></div>
     <a href="#kantone">Termine nach Kanton</a>
   </div>
+
+  <button type="button" class="nav-burger" aria-expanded="false" aria-controls="navMobile" aria-label="Menü öffnen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  <div class="nav-mobile" id="navMobile" hidden><div class="nm-head">Die App</div><a href="index.html">Startseite</a><a href="index.html#how">So funktionierts</a><div class="nm-head">Hilfe &amp; Werkzeuge</div><a href="nachmieter-finden.html">Ratgeber: Nachmieter finden</a><a href="nachmieter-finden.html#vorlagen">Musterbriefe gratis</a><a href="kuendigungstermin-rechner.html">Doppelmiete-Rechner</a><a href="mailto:info@expresswohnung.ch">Kontakt</a></div>
 </nav>
 
 <header class="page-head">
@@ -189,8 +224,14 @@
   <form class="calc" id="rechner" novalidate>
     <div class="grid">
       <div class="field">
-        <label for="miete">Monatsmiete brutto (CHF)</label>
+        <label for="miete">Heutige Monatsmiete brutto (CHF)</label>
         <input id="miete" type="number" inputmode="numeric" min="1" step="1" placeholder="z. B. 1800">
+        <span class="hint">Die Miete der Wohnung, aus der du ausziehst.</span>
+      </div>
+      <div class="field">
+        <label for="neumiete">Neue Monatsmiete (freiwillig)</label>
+        <input id="neumiete" type="number" inputmode="numeric" min="1" step="1" placeholder="z. B. 2100">
+        <span class="hint">Zeigt, was du mit Nachmieter noch zahlst.</span>
       </div>
       <div class="field">
         <label for="neu">Neue Wohnung ab</label>
@@ -419,11 +460,11 @@
   $('rechner').addEventListener('submit', function (e) {
     e.preventDefault();
     var aus = $('ausgabe');
-    var miete = parseFloat($('miete').value), neu = parse($('neu').value), eingang = parse($('eingang').value);
+    var miete = parseFloat($('miete').value), neumiete = parseFloat($('neumiete').value), neu = parse($('neu').value), eingang = parse($('eingang').value);
     var n = parseInt($('frist').value, 10), mu = $('muster').value, beginn = parse($('beginn').value);
     var eigen = [].slice.call(document.querySelectorAll('#eigenMonate input:checked')).map(function (c) { return +c.value; });
     var fehler = [];
-    if (!(miete > 0)) fehler.push('die Monatsmiete');
+    if (!(miete > 0)) fehler.push('die heutige Monatsmiete');
     if (!neu) fehler.push('das Datum der neuen Wohnung');
     if (!eingang) fehler.push('das Eingangsdatum der Kündigung');
     if (mu === 'dauer' && !beginn) fehler.push('den Mietbeginn');
@@ -453,19 +494,26 @@
     } else {
       var mon = monateZwischen(neu, ende), betrag = mon * miete;
       var monTxt = mon < 1.05 && mon > 0.95 ? 'rund 1 Monat' : 'rund ' + (Math.round(mon * 10) / 10).toLocaleString('de-CH') + ' Monate';
-      html = '<div class="result"><p style="margin:0">Ohne Nachmieter zahlst du doppelt</p>' +
-        '<div class="big">' + chf(betrag) + '</div>' +
-        '<p><strong>' + monTxt + '</strong>: vom ' + fmt(neu) + ' bis ' + fmt(ende) + '.</p>' +
+      var ua = navigator.userAgent || '', ios = /iPhone|iPad|iPod/i.test(ua), android = /Android/i.test(ua);
+      var AS = 'https://apps.apple.com/app/expresswohnung/id6761208372', GP = 'https://play.google.com/store/apps/details?id=ch.expresswohnung.app';
+      var knopf = ios ? '<a class="cta-main" href="' + AS + '" data-pos="rechner" rel="noopener">Nachmieter finden – gratis inserieren</a>'
+        : android ? '<a class="cta-main" href="' + GP + '" data-pos="rechner" rel="noopener">Nachmieter finden – gratis inserieren</a>'
+        : '<div class="stores"><a href="' + AS + '" data-pos="rechner" rel="noopener">App Store</a><a href="' + GP + '" data-pos="rechner" rel="noopener">Google Play</a></div>';
+      html = '<div class="result">' +
+        '<div class="vergleich">' +
+          '<div class="zeile ohne"><span class="lbl">Ohne Nachmieter</span><span class="wert">' + chf(betrag) + '</span><span class="sub">doppelte Miete, ' + monTxt + ' alte Miete zusätzlich</span></div>' +
+          '<div class="zeile mit"><span class="lbl">Mit Nachmieter ab ' + fmt(neu) + '</span><span class="wert">CHF 0</span><span class="sub">doppelt – du zahlst nur noch deine neue Miete' + (neumiete > 0 ? ' von ' + chf(neumiete) : '') + '</span></div>' +
+        '</div>' +
+        '<div class="spar">Du sparst bis zu <strong>' + chf(betrag) + '</strong></div>' +
+        '<div class="cta">' + knopf + '<p>Inserat in 2 Minuten · gratis · ohne Makler · ohne Anmeldung</p></div>' +
+        '<details class="det"><summary>Details: Termine und Fristen</summary>' +
         '<ul class="timeline"><li>Kündigung trifft ein am ' + fmt(eingang) + '</li>' +
-        '<li>Frühestes Mietende: <strong>' + fmt(ende) + '</strong></li>' +
+        '<li>Frühestes Mietende ohne Nachmieter: <strong>' + fmt(ende) + '</strong></li>' +
         (passend ? '<li>Für ein Mietende am ' + fmt(passend) + ' hätte die Kündigung bis am ' + fmt(spaetestens(passend, n)) + ' eintreffen müssen</li>' : '') +
         '</ul>' +
-        '<p class="fine">Das ist die Obergrenze. Vermietet der Vermieter früher weiter, wird die Miete angerechnet (Art. 264 Abs. 3 OR).</p>' +
-        '<div class="cta"><strong>Mit einem Nachmieter bist du früher raus</strong>' +
-        '<p>Schlägst du einen zumutbaren Nachmieter vor, endet deine Mietpflicht ab seiner Übernahme (Art. 264 OR). Inserat in 2 Minuten, gratis, ohne Makler, ohne Anmeldung.</p>' +
-        '<div class="stores"><a href="https://apps.apple.com/app/expresswohnung/id6761208372" data-pos="rechner" rel="noopener">App Store</a>' +
-        '<a href="https://play.google.com/store/apps/details?id=ch.expresswohnung.app" data-pos="rechner" rel="noopener">Google Play</a>' +
-        '<a href="nachmieter-finden.html#vorlagen" data-ew="zur-app" data-pos="rechner-vorlagen">Musterbriefe</a></div></div></div>';
+        '<p class="fine">«Bis zu», weil der Betrag nur ganz wegfällt, wenn der Nachmieter genau ab deinem Umzug übernimmt und der Vermieter ihn annimmt (Art. 264 OR). Ohne Nachmieter ist der Betrag die Obergrenze: Vermietet der Vermieter früher weiter, wird die Miete angerechnet (Art. 264 Abs. 3 OR).</p>' +
+        '<p class="fine"><a href="nachmieter-finden.html#vorlagen" data-ew="zur-app" data-pos="rechner-vorlagen">Musterbriefe für Kündigung und Nachmieter-Vorschlag</a></p>' +
+        '</details></div>';
       if (typeof gtag === 'function') gtag('event', 'rechner_berechnet', { doppelmiete_monate: Math.round(mon) });
     }
     aus.innerHTML = html;
@@ -487,6 +535,29 @@ document.addEventListener('click', function (e) {
   else if (a.getAttribute('data-ew') === 'zur-app') n = 'ratgeber_zur_app';
   if (n) gtag('event', n, { link_position: a.getAttribute('data-pos') || '' });
 });
+</script>
+<script>
+/* Menü «Hilfe & Werkzeuge» (15.09.2026) */
+(function () {
+  var dds = document.querySelectorAll('.nav-dd');
+  dds.forEach(function (d) {
+    var b = d.querySelector('.nav-dd-btn'), m = d.querySelector('.nav-dd-menu');
+    b.addEventListener('click', function (e) { e.stopPropagation(); var auf = m.hidden; m.hidden = !auf; b.setAttribute('aria-expanded', auf ? 'true' : 'false'); });
+  });
+  document.addEventListener('click', function (e) {
+    dds.forEach(function (d) { if (!d.contains(e.target)) { d.querySelector('.nav-dd-menu').hidden = true; d.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); } });
+  });
+  var bu = document.querySelector('.nav-burger'), mo = document.getElementById('navMobile');
+  if (bu && mo) {
+    bu.addEventListener('click', function () { var auf = mo.hidden; mo.hidden = !auf; bu.setAttribute('aria-expanded', auf ? 'true' : 'false'); bu.setAttribute('aria-label', auf ? 'Menü schliessen' : 'Menü öffnen'); });
+    mo.addEventListener('click', function (e) { if (e.target.closest('a')) { mo.hidden = true; bu.setAttribute('aria-expanded', 'false'); } });
+  }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { dds.forEach(function (d) { d.querySelector('.nav-dd-menu').hidden = true; }); if (mo) mo.hidden = true; } });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('.nav-dd-menu a, .nav-mobile a') : null;
+    if (a && typeof gtag === 'function') gtag('event', 'menu_klick', { ziel: a.getAttribute('href') });
+  });
+})();
 </script>
 </body>
 </html>
