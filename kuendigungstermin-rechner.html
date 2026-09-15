@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<!-- Google tag (gtag.js) — Google Analytics 4, Property "ExpressWohnung" -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JTQYNFDYW5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JTQYNFDYW5');
+</script>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.expresswohnung.ch/kuendigungstermin-rechner.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kündigungstermin-Rechner Schweiz: Was kostet dich die Doppelmiete?</title>
+<meta name="description" content="Gratis-Rechner: Wann endet dein Mietvertrag frühestens, und wie viele Monate zahlst du ohne Nachmieter doppelt Miete? Mit Kündigungsfrist, Kündigungsterminen und Übersicht nach Kanton.">
+<meta property="og:title" content="Doppelmiete-Rechner: Wann endet dein Mietvertrag?">
+<meta property="og:description" content="In 30 Sekunden ausrechnen, wie lange du ohne Nachmieter doppelt Miete zahlst. Gratis, ohne Anmeldung.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.expresswohnung.ch/kuendigungstermin-rechner.html">
+<meta property="og:image" content="https://www.expresswohnung.ch/og_image.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://www.expresswohnung.ch/kuendigungstermin-rechner.html#rechner",
+      "name": "Kündigungstermin- und Doppelmiete-Rechner",
+      "url": "https://www.expresswohnung.ch/kuendigungstermin-rechner.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "de-CH",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CHF" },
+      "publisher": { "@type": "Organization", "name": "ExpressWohnung", "url": "https://www.expresswohnung.ch/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ExpressWohnung", "item": "https://www.expresswohnung.ch/" },
+        { "@type": "ListItem", "position": 2, "name": "Kündigungstermin-Rechner", "item": "https://www.expresswohnung.ch/kuendigungstermin-rechner.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Was ist der Unterschied zwischen Kündigungsfrist und Kündigungstermin?", "acceptedAnswer": { "@type": "Answer", "text": "Die Kündigungsfrist ist die Zeitspanne zwischen dem Eingang der Kündigung und dem Ende des Mietverhältnisses, bei Wohnungen mindestens drei Monate. Der Kündigungstermin ist das Datum, auf das gekündigt werden kann, zum Beispiel der 31. März oder jedes Monatsende." } },
+        { "@type": "Question", "name": "Wann muss meine Kündigung beim Vermieter sein?", "acceptedAnswer": { "@type": "Answer", "text": "Spätestens am letzten Tag vor Beginn der Kündigungsfrist. Für den 30. September mit drei Monaten Frist muss sie also bis am 30. Juni eintreffen. Massgebend ist der Eingang, nicht der Poststempel." } },
+        { "@type": "Question", "name": "Was passiert, wenn ich den Kündigungstermin verpasse?", "acceptedAnswer": { "@type": "Answer", "text": "Die Kündigung ist nicht ungültig, sie gilt einfach auf den nächstmöglichen Termin (Art. 266a Abs. 2 OR). Bis dahin schuldest du die Miete, ausser du schlägst einen zumutbaren Nachmieter vor (Art. 264 OR)." } },
+        { "@type": "Question", "name": "Gelten die Termine aus dem Mietvertrag oder die ortsüblichen?", "acceptedAnswer": { "@type": "Answer", "text": "Die im Mietvertrag vereinbarten Termine und Fristen gehen vor, sofern die Frist nicht kürzer als drei Monate ist. Die ortsüblichen Termine gelten nur, wenn der Vertrag nichts anderes regelt." } },
+        { "@type": "Question", "name": "Muss ich die ganze Doppelmiete bezahlen?", "acceptedAnswer": { "@type": "Answer", "text": "Der Rechner zeigt die Obergrenze. Vermietet der Vermieter die Wohnung vorher weiter, muss er sich die Einnahmen anrechnen lassen (Art. 264 Abs. 3 OR). Sicher früher aus dem Vertrag kommst du mit einem zumutbaren, zahlungsfähigen Nachmieter." } }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  :root {
+    --red: #DC1428; --red-dark: #A50E1E; --red-deep: #6E0A14; --red-bg: #FFF5F5;
+    --white: #FFFFFF; --black: #0D0D0D; --gray: #5A5A6A; --gray-light: #F6F6F8; --gray-border: #E4E4E8;
+    --green: #1F7A45; --green-bg: #EEF8F1;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; color: var(--black); line-height: 1.7; background: var(--white); }
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(220,20,40,0.97); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    padding: 14px 32px; display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { width: 36px; height: 36px; border-radius: 8px; }
+  .nav-logo span { color: white; font-weight: 700; font-size: 18px; letter-spacing: -0.3px; }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; font-weight: 500; }
+  .nav-links a:hover { color: white; }
+
+  header.page-head { background: linear-gradient(150deg, var(--red) 0%, var(--red-deep) 100%); color: white; padding: 130px 20px 56px; text-align: center; }
+  .page-head-inner { max-width: 760px; margin: 0 auto; }
+  .page-head .crumb { font-size: 13px; opacity: 0.75; margin-bottom: 14px; }
+  .page-head .crumb a { color: white; text-decoration: none; }
+  .page-head h1 { font-size: 36px; font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin-bottom: 14px; }
+  .page-head p { font-size: 17px; opacity: 0.92; max-width: 620px; margin: 0 auto; }
+
+  main { max-width: 720px; margin: 0 auto; padding: 0 20px 72px; }
+  main h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin: 48px 0 14px; scroll-margin-top: 80px; }
+  main h3 { font-size: 19px; font-weight: 700; margin: 28px 0 10px; }
+  main p { font-size: 16px; color: #333340; margin-bottom: 16px; }
+  main ul { margin: 0 0 16px 24px; font-size: 16px; color: #333340; }
+  main li { margin-bottom: 8px; }
+  main a { color: var(--red-dark); }
+
+  .calc { background: white; border: 1px solid var(--gray-border); border-radius: 20px; box-shadow: 0 12px 40px rgba(13,13,13,0.08); padding: 26px; margin-top: -28px; position: relative; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px; }
+  .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .field.wide { grid-column: 1 / -1; }
+  .field label { font-size: 14px; font-weight: 700; }
+  .field .hint { font-size: 13px; color: var(--gray); line-height: 1.45; }
+  .field input, .field select { font: inherit; font-size: 16px; padding: 11px 12px; border: 1px solid #CFCFD6; border-radius: 12px; background: white; color: var(--black); width: 100%; min-width: 0; }
+  .field input:focus, .field select:focus { outline: 2px solid var(--red); outline-offset: 1px; border-color: var(--red); }
+  .months { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+  .months label { display: flex; align-items: center; justify-content: center; gap: 4px; font-size: 13px; font-weight: 600; border: 1px solid #CFCFD6; border-radius: 10px; padding: 7px 2px; cursor: pointer; }
+  .months input { accent-color: var(--red); }
+  .kanton-note { font-size: 13px; line-height: 1.5; border-radius: 12px; padding: 10px 12px; background: var(--gray-light); color: #333340; }
+  .kanton-note.warn { background: #FFFBF0; color: #6B4C00; }
+  button.go { margin-top: 20px; width: 100%; background: var(--red); color: white; border: 0; border-radius: 100px; padding: 15px 20px; font-size: 16px; font-weight: 800; cursor: pointer; }
+  button.go:hover { background: var(--red-dark); }
+  .privacy { font-size: 12px; color: var(--gray); text-align: center; margin-top: 10px; }
+
+  .result { margin-top: 22px; border-radius: 16px; padding: 22px; background: var(--red-bg); border: 1px solid #f5c6c9; }
+  .result.ok { background: var(--green-bg); border-color: #BFE3CB; }
+  .result .big { font-size: 32px; font-weight: 800; letter-spacing: -0.8px; line-height: 1.15; color: var(--red-dark); margin: 4px 0 6px; }
+  .result.ok .big { color: var(--green); }
+  .result p { font-size: 15px; margin-bottom: 10px; }
+  .result .fine { font-size: 13px; color: var(--gray); margin: 0; }
+  .timeline { list-style: none; margin: 14px 0 12px; padding: 0; border-left: 3px solid rgba(165,14,30,0.25); }
+  .timeline li { position: relative; padding: 0 0 10px 16px; font-size: 15px; margin: 0; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: 8px; width: 11px; height: 11px; border-radius: 50%; background: var(--red-dark); }
+  .result.ok .timeline { border-color: rgba(31,122,69,0.3); }
+  .result.ok .timeline li::before { background: var(--green); }
+  .cta { margin-top: 16px; background: linear-gradient(150deg, var(--red) 0%, var(--red-dark) 100%); color: white; border-radius: 16px; padding: 20px; text-align: center; }
+  .cta strong { display: block; font-size: 18px; margin-bottom: 4px; }
+  .cta p { color: rgba(255,255,255,0.92); font-size: 14px; margin-bottom: 14px; }
+  .stores { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .stores a { display: inline-block; background: white; color: var(--red-dark); font-weight: 700; text-decoration: none; padding: 10px 18px; border-radius: 100px; font-size: 14px; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0 12px; border: 1px solid var(--gray-border); border-radius: 14px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--gray-border); vertical-align: top; }
+  th { background: var(--gray-light); font-weight: 700; }
+  tr:last-child td { border-bottom: 0; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; border-radius: 100px; padding: 1px 8px; white-space: nowrap; }
+  .tag.a { background: var(--green-bg); color: var(--green); }
+  .tag.u { background: var(--gray-light); color: #444; }
+  .tag.x { background: #FFF3D6; color: #7A5200; }
+  details { border-bottom: 1px solid var(--gray-border); padding: 14px 0; }
+  summary { font-weight: 700; cursor: pointer; font-size: 16px; }
+  details p { margin: 10px 0 0; }
+  .law-box { background: #FFFBF0; border: 1px solid #EDD87A; border-radius: 16px; padding: 18px 22px; margin: 20px 0; font-size: 15px; color: #6B4C00; }
+  .law-box p { color: #6B4C00; font-size: 15px; margin-bottom: 8px; }
+
+  .footer-social { display: flex; gap: 14px; justify-content: center; margin-bottom: 20px; }
+  .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.8); }
+  .footer-social a:hover { background: rgba(255,255,255,0.24); color: white; }
+  .footer-social svg { width: 20px; height: 20px; fill: currentColor; }
+  footer { background: var(--red-deep); color: white; padding: 40px 20px 28px; text-align: center; }
+  .footer-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
+  .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14px; }
+  .footer-links a:hover { color: white; }
+  .footer-copy { font-size: 12px; opacity: 0.35; }
+  @media (max-width: 640px) {
+    nav.top { padding: 12px 16px; }
+    .nav-links { display: none; }
+    .page-head h1 { font-size: 27px; }
+    .grid { grid-template-columns: 1fr; }
+    .calc { padding: 20px 16px; }
+    .months { grid-template-columns: repeat(4, 1fr); }
+    .result .big { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a class="nav-logo" href="index.html">
+    <img src="icon.png" alt="ExpressWohnung">
+    <span>ExpressWohnung</span>
+  </a>
+  <div class="nav-links">
+    <a href="nachmieter-finden.html">Ratgeber</a>
+    <a href="nachmieter-finden.html#vorlagen">Vorlagen</a>
+    <a href="#kantone">Termine nach Kanton</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="page-head-inner">
+    <p class="crumb"><a href="index.html">ExpressWohnung</a> › Rechner</p>
+    <h1>Kündigungstermin-Rechner: Was kostet dich die Doppelmiete?</h1>
+    <p>Rechne in 30 Sekunden aus, wann dein Mietvertrag frühestens endet und wie lange du ohne Nachmieter doppelt Miete zahlst.</p>
+  </div>
+</header>
+
+<main>
+  <form class="calc" id="rechner" novalidate>
+    <div class="grid">
+      <div class="field">
+        <label for="miete">Monatsmiete brutto (CHF)</label>
+        <input id="miete" type="number" inputmode="numeric" min="1" step="1" placeholder="z. B. 1800">
+      </div>
+      <div class="field">
+        <label for="neu">Neue Wohnung ab</label>
+        <input id="neu" type="date">
+        <span class="hint">Ab diesem Tag zahlst du die neue Miete.</span>
+      </div>
+      <div class="field">
+        <label for="eingang">Kündigung trifft ein am</label>
+        <input id="eingang" type="date">
+        <span class="hint">Beim Vermieter. Rechne beim Einschreiben ein paar Tage Postweg ein.</span>
+      </div>
+      <div class="field">
+        <label for="frist">Kündigungsfrist</label>
+        <select id="frist">
+          <option value="3" selected>3 Monate (gesetzliches Minimum)</option>
+          <option value="4">4 Monate</option>
+          <option value="6">6 Monate</option>
+          <option value="12">12 Monate</option>
+        </select>
+        <span class="hint">Steht in deinem Mietvertrag.</span>
+      </div>
+      <div class="field">
+        <label for="kanton">Kanton</label>
+        <select id="kanton">
+          <option value="">– bitte wählen –</option>
+          <option>AG</option><option>AI</option><option>AR</option><option>BE</option><option>BL</option><option>BS</option>
+          <option>FR</option><option>GE</option><option>GL</option><option>GR</option><option>JU</option><option>LU</option>
+          <option>NE</option><option>NW</option><option>OW</option><option>SG</option><option>SH</option><option>SO</option>
+          <option>SZ</option><option>TG</option><option>TI</option><option>UR</option><option>VD</option><option>VS</option>
+          <option>ZG</option><option>ZH</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="muster">Kündigungstermine</label>
+        <select id="muster">
+          <option value="meod">Jedes Monatsende ausser Dezember</option>
+          <option value="me">Jedes Monatsende</option>
+          <option value="q">31. März, 30. Juni, 30. September</option>
+          <option value="h39">31. März und 30. September</option>
+          <option value="h410">30. April und 31. Oktober</option>
+          <option value="dauer">Alle 3 Monate ab Mietbeginn</option>
+          <option value="eigen">Eigene Monate wählen</option>
+        </select>
+        <span class="hint">Massgebend ist dein Mietvertrag.</span>
+      </div>
+      <div class="field wide" id="kantonNoteWrap" hidden>
+        <div class="kanton-note" id="kantonNote"></div>
+      </div>
+      <div class="field wide" id="eigenWrap" hidden>
+        <label>Kündbar auf Ende von …</label>
+        <div class="months" id="eigenMonate"></div>
+      </div>
+      <div class="field wide" id="beginnWrap" hidden>
+        <label for="beginn">Mietbeginn laut Vertrag</label>
+        <input id="beginn" type="date">
+        <span class="hint">Gibt es keine festen Termine, endet die Miete auf das Ende einer dreimonatigen Mietdauer (Art. 266c OR).</span>
+      </div>
+    </div>
+    <button type="submit" class="go">Doppelmiete berechnen</button>
+    <p class="privacy">Die Berechnung läuft nur in deinem Browser. Es wird nichts gespeichert.</p>
+    <div id="ausgabe" aria-live="polite"></div>
+  </form>
+
+  <h2 id="so">So rechnet der Rechner</h2>
+  <p>Eine Wohnung kannst du nur auf einen <strong>Kündigungstermin</strong> kündigen, und die Kündigung muss vor Beginn der <strong>Kündigungsfrist</strong> beim Vermieter sein. Der Rechner sucht den ersten Termin, der mit deinem Eingangsdatum noch erreichbar ist. Liegt dieser Termin nach dem Einzug in die neue Wohnung, zahlst du in der Zwischenzeit doppelt.</p>
+  <div class="law-box">
+    <p><b>Art. 266c OR:</b> Wohnungen können mit einer Frist von drei Monaten auf einen ortsüblichen Termin gekündigt werden. Gibt es keinen, gilt das Ende einer dreimonatigen Mietdauer.</p>
+    <p><b>Art. 266a OR:</b> Vereinbarte längere Fristen und andere Termine gehen vor. Wird ein Termin verpasst, gilt die Kündigung auf den nächstmöglichen.</p>
+    <p style="margin-bottom:0"><b>Art. 264 OR:</b> Wer einen zumutbaren, zahlungsfähigen Nachmieter vorschlägt, ist von da an von der Miete befreit.</p>
+  </div>
+  <p><strong>Beispiel:</strong> Du hast eine neue Wohnung ab 1. November. Im Vertrag stehen drei Monate Frist und die Termine 31. März und 30. September. Den 30. September verpasst du, weil die Kündigung erst im Juli eintrifft. Der nächste Termin ist der 31. März. Von November bis März sind das fünf Monate doppelt, bei CHF 1'800 Miete also CHF 9'000.</p>
+
+  <h2 id="kantone">Ortsübliche Kündigungstermine nach Kanton</h2>
+  <p>Die Termine gelten nur, wenn dein Mietvertrag keine eigenen festlegt, und sie unterscheiden sich teils von Gemeinde zu Gemeinde. Amtliche Listen gibt es nur für wenige Kantone. Wir zeigen deshalb offen, wie gut jede Angabe belegt ist.</p>
+  <p style="font-size:14px;"><span class="tag a">amtlich</span> kantonale Stelle oder Rahmenmietvertrag &nbsp; <span class="tag u">Übersicht</span> übereinstimmende öffentliche Übersichten &nbsp; <span class="tag x">uneinheitlich</span> je nach Gemeinde oder Quellen widersprechen sich</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Kanton</th><th>Termine für Wohnungen</th><th>Beleg</th></tr></thead>
+      <tbody>
+        <tr><td>Aargau</td><td>31.3., 30.6., 30.9.</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Appenzell Ausserrhoden</td><td>Jedes Monatsende ausser Dezember</td><td><span class="tag a">amtlich</span></td></tr>
+        <tr><td>Appenzell Innerrhoden</td><td>Jedes Monatsende ausser Dezember</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Basel-Landschaft</td><td>Jedes Monatsende ausser Dezember</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Basel-Stadt</td><td>Jedes Monatsende ausser Dezember</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Bern</td><td>Jedes Monatsende ausser Dezember; Stadt Bern: 30.4. und 31.10.</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Freiburg</td><td>31.3., 30.6., 30.9., teils zusätzlich 31.12.</td><td><span class="tag x">uneinheitlich</span></td></tr>
+        <tr><td>Genf</td><td>Keine Ortsübung; Rahmenmietvertrag: alle 3 Monate ab Mietbeginn</td><td><span class="tag a">amtlich</span></td></tr>
+        <tr><td>Glarus</td><td>Jedes Monatsende</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Graubünden</td><td>Je nach Gemeinde, meist 31.3. und 30.9.</td><td><span class="tag x">uneinheitlich</span></td></tr>
+        <tr><td>Jura</td><td>Je nach Gemeinde</td><td><span class="tag x">uneinheitlich</span></td></tr>
+        <tr><td>Luzern</td><td>Quellen widersprechen sich</td><td><span class="tag x">uneinheitlich</span></td></tr>
+        <tr><td>Neuenburg</td><td>31.3., 30.6., 30.9., teils zusätzlich 31.12.</td><td><span class="tag x">uneinheitlich</span></td></tr>
+        <tr><td>Nidwalden</td><td>31.3., 30.6., 30.9.</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Obwalden</td><td>31.3., 30.6., 30.9.</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>St. Gallen</td><td>Jedes Monatsende ausser Dezember</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Schaffhausen</td><td>Jedes Monatsende ausser Dezember</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Solothurn</td><td>31.3. und 30.9.; Region Olten-Gösgen: 31.3., 30.6., 30.9.</td><td><span class="tag x">uneinheitlich</span></td></tr>
+        <tr><td>Schwyz</td><td>Jedes Monatsende ausser Dezember</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Thurgau</td><td>Je nach Gemeinde</td><td><span class="tag x">uneinheitlich</span></td></tr>
+        <tr><td>Tessin</td><td>Je nach Gemeinde</td><td><span class="tag x">uneinheitlich</span></td></tr>
+        <tr><td>Uri</td><td>Jedes Monatsende ausser Dezember</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Waadt</td><td>1.4., 1.7., 1.10. jeweils mittags (Mietende praktisch Ende März, Juni, September)</td><td><span class="tag a">amtlich</span></td></tr>
+        <tr><td>Wallis</td><td>Keine einheitlichen Termine bekannt</td><td><span class="tag x">uneinheitlich</span></td></tr>
+        <tr><td>Zug</td><td>31.3., 30.6., 30.9.</td><td><span class="tag u">Übersicht</span></td></tr>
+        <tr><td>Zürich</td><td>31.3., 30.6., 30.9.; Stadt Zürich: 31.3. und 30.9.</td><td><span class="tag u">Übersicht</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px; color:var(--gray);">Quellen, Stand September 2026: Obligationenrecht Art. 264, 266a, 266c; Mieterinnen- und Mieterverband; Schlichtungsstelle Appenzell Ausserrhoden; Rahmenmietverträge Waadt (RULV) und Genf; Übersichten von Comparis (2021), homegate (2024) und ImmoScout24 (2025). Die Termine je Gemeinde führt die <a href="https://www.mietrecht.ch/schlichtungsbehorden" rel="noopener">Datenbank der Schlichtungsbehörden auf mietrecht.ch</a>. Im Zweifel gibt die Schlichtungsbehörde deines Kantons kostenlos Auskunft.</p>
+
+  <h2 id="faq">Fragen und Antworten</h2>
+  <details><summary>Was ist der Unterschied zwischen Kündigungsfrist und Kündigungstermin?</summary><p>Die Kündigungsfrist ist die Zeitspanne zwischen dem Eingang der Kündigung und dem Ende des Mietverhältnisses, bei Wohnungen mindestens drei Monate. Der Kündigungstermin ist das Datum, auf das gekündigt werden kann, zum Beispiel der 31. März oder jedes Monatsende.</p></details>
+  <details><summary>Wann muss meine Kündigung beim Vermieter sein?</summary><p>Spätestens am letzten Tag vor Beginn der Kündigungsfrist. Für den 30. September mit drei Monaten Frist muss sie also bis am 30. Juni eintreffen. Massgebend ist der Eingang, nicht der Poststempel.</p></details>
+  <details><summary>Was passiert, wenn ich den Kündigungstermin verpasse?</summary><p>Die Kündigung ist nicht ungültig, sie gilt einfach auf den nächstmöglichen Termin (Art. 266a Abs. 2 OR). Bis dahin schuldest du die Miete, ausser du schlägst einen zumutbaren Nachmieter vor (Art. 264 OR).</p></details>
+  <details><summary>Gelten die Termine aus dem Mietvertrag oder die ortsüblichen?</summary><p>Die im Mietvertrag vereinbarten Termine und Fristen gehen vor, sofern die Frist nicht kürzer als drei Monate ist. Die ortsüblichen Termine gelten nur, wenn der Vertrag nichts anderes regelt.</p></details>
+  <details><summary>Muss ich die ganze Doppelmiete bezahlen?</summary><p>Der Rechner zeigt die Obergrenze. Vermietet der Vermieter die Wohnung vorher weiter, muss er sich die Einnahmen anrechnen lassen (Art. 264 Abs. 3 OR). Sicher früher aus dem Vertrag kommst du mit einem zumutbaren, zahlungsfähigen Nachmieter. Wie das geht, steht im <a href="nachmieter-finden.html">Ratgeber mit Musterbriefen</a>.</p></details>
+
+  <p style="font-size:13px; color:var(--gray); margin-top:36px;">Hinweis: Der Rechner gibt eine Orientierung und ersetzt keine Rechtsberatung. Er gilt für Wohnungen, nicht für Geschäftsräume, möblierte Zimmer oder befristete Verträge. Bei einer Familienwohnung braucht die Kündigung die Zustimmung des Ehegatten oder eingetragenen Partners (Art. 266m OR).</p>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Startseite</a>
+    <a href="nachmieter-finden.html">Nachmieter finden</a>
+    <a href="agb.html">AGB</a>
+    <a href="datenschutz.html">Datenschutzerklärung</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="mailto:info@expresswohnung.ch">Kontakt</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/ExpressWohnung" target="_blank" rel="noopener me" aria-label="ExpressWohnung auf Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></svg></a>
+    <a href="https://www.instagram.com/expresswohnung/" target="_blank" rel="noopener me" aria-label="ExpressWohnung auf Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm4.9-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 4.6c2.4 0 2.7 0 3.6.1 2.4.1 3.6 1.2 3.7 3.7.1.9.1 1.2.1 3.6s0 2.7-.1 3.6c-.1 2.4-1.2 3.6-3.7 3.7-.9.1-1.2.1-3.6.1s-2.7 0-3.6-.1c-2.5-.1-3.6-1.3-3.7-3.7-.1-.9-.1-1.2-.1-3.6s0-2.7.1-3.6C4.8 5.9 5.9 4.8 8.4 4.7c.9-.1 1.2-.1 3.6-.1zM12 3c-2.4 0-2.8 0-3.7.1C5 3.2 3.2 5 3.1 8.3 3 9.2 3 9.6 3 12s0 2.8.1 3.7c.1 3.3 1.9 5.1 5.2 5.2.9.1 1.3.1 3.7.1s2.8 0 3.7-.1c3.3-.1 5.1-1.9 5.2-5.2.1-.9.1-1.3.1-3.7s0-2.8-.1-3.7C20.8 5 19 3.2 15.7 3.1 14.8 3 14.4 3 12 3z"/></svg></a>
+  </div>
+  <p class="footer-copy">&copy; 2026 ExpressWohnung. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+(function () {
+  // ---------- Kantonsvorschläge (nur wo belegt oder Übersichten übereinstimmen) ----------
+  var KANTON = {
+    AG: { m: 'q' }, AI: { m: 'meod' }, AR: { m: 'meod' }, BL: { m: 'meod' }, BS: { m: 'meod' },
+    BE: { m: 'meod', t: 'In der Stadt Bern gelten 30. April und 31. Oktober.' },
+    GL: { m: 'me' }, NW: { m: 'q' }, OW: { m: 'q' }, SG: { m: 'meod' }, SH: { m: 'meod' }, SZ: { m: 'meod' },
+    UR: { m: 'meod' }, ZG: { m: 'q' },
+    ZH: { m: 'q', t: 'In der Stadt Zürich gelten 31. März und 30. September.' },
+    VD: { m: 'q', t: 'Waadt: Termine 1.4., 1.7. und 1.10. jeweils mittags, das Mietende liegt praktisch Ende März, Juni und September.' },
+    GE: { m: 'dauer', t: 'Genf kennt keine Ortsübung. Gib den Mietbeginn ein, falls dein Vertrag keine Termine nennt.' },
+    FR: { x: 1 }, GR: { x: 1 }, JU: { x: 1 }, LU: { x: 1 }, NE: { x: 1 }, SO: { x: 1 }, TG: { x: 1 }, TI: { x: 1 }, VS: { x: 1 }
+  };
+  var MON = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+  var $ = function (id) { return document.getElementById(id); };
+
+  // Monats-Checkboxen
+  var box = $('eigenMonate');
+  ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'].forEach(function (k, i) {
+    var l = document.createElement('label');
+    l.innerHTML = '<input type="checkbox" value="' + i + '"' + ((i === 2 || i === 8) ? ' checked' : '') + '> ' + k;
+    box.appendChild(l);
+  });
+
+  // ---------- Datumsrechnung (UTC, keine Sommerzeit-Fallen) ----------
+  function D(y, m, d) { return new Date(Date.UTC(y, m, d)); }
+  function parse(v) { if (!v) return null; var p = v.split('-'); return D(+p[0], +p[1] - 1, +p[2]); }
+  function iso(d) { return d.toISOString().slice(0, 10); }
+  function addDays(d, n) { return new Date(d.getTime() + n * 86400000); }
+  function dim(y, m) { return new Date(Date.UTC(y, m + 1, 0)).getUTCDate(); }
+  function addMonths(d, n) {
+    var y = d.getUTCFullYear(), m = d.getUTCMonth() + n, day = d.getUTCDate();
+    var ty = y + Math.floor(m / 12), tm = ((m % 12) + 12) % 12;
+    return D(ty, tm, Math.min(day, dim(ty, tm)));
+  }
+  function eom(y, m) { return D(y, m, dim(y, m)); }
+  function fmt(d) { return d.getUTCDate() + '. ' + MON[d.getUTCMonth()] + ' ' + d.getUTCFullYear(); }
+  function chf(x) { return 'CHF ' + (Math.round(x / 10) * 10).toLocaleString('de-CH'); }
+
+  function termine(von, muster, beginn, eigen) {
+    var out = [], y0 = von.getUTCFullYear() - 1, y1 = y0 + 5, y, m;
+    if (muster === 'dauer') {
+      if (!beginn) return out;
+      for (var k = 1; k < 400; k++) { var t = addDays(addMonths(beginn, 3 * k), -1); if (t.getUTCFullYear() > y1) break; out.push(t); }
+      return out;
+    }
+    var mon = { me: [0,1,2,3,4,5,6,7,8,9,10,11], meod: [0,1,2,3,4,5,6,7,8,9,10], q: [2,5,8], h39: [2,8], h410: [3,9], eigen: eigen }[muster] || [];
+    for (y = y0; y <= y1; y++) for (m = 0; m < mon.length; m++) out.push(eom(y, mon[m]));
+    return out.sort(function (a, b) { return a - b; });
+  }
+  // letzter Eingangstag für Termin t bei Frist n Monaten
+  function spaetestens(t, n) { return addDays(addMonths(addDays(t, 1), -n), -1); }
+  function fruehesterTermin(liste, eingang, n) {
+    for (var i = 0; i < liste.length; i++) if (liste[i] >= eingang && eingang <= spaetestens(liste[i], n)) return liste[i];
+    return null;
+  }
+  function monateZwischen(start, endeInkl) {
+    var ende = addDays(endeInkl, 1), m = 0;
+    while (addMonths(start, m + 1) <= ende) m++;
+    var basis = addMonths(start, m), rest = (ende - basis) / 86400000;
+    return m + rest / dim(basis.getUTCFullYear(), basis.getUTCMonth());
+  }
+
+  // ---------- Formular ----------
+  var heute = new Date(); var h = D(heute.getFullYear(), heute.getMonth(), heute.getDate());
+  $('eingang').value = iso(addDays(h, 3));
+  $('neu').value = iso(D(h.getUTCFullYear(), h.getUTCMonth() + 2, 1));
+
+  function sichtbar() {
+    var mu = $('muster').value;
+    $('eigenWrap').hidden = mu !== 'eigen';
+    $('beginnWrap').hidden = mu !== 'dauer';
+  }
+  $('muster').addEventListener('change', sichtbar);
+  $('kanton').addEventListener('change', function () {
+    var k = KANTON[this.value], note = $('kantonNote');
+    if (!k) { $('kantonNoteWrap').hidden = true; return; }
+    $('kantonNoteWrap').hidden = false;
+    if (k.x) {
+      note.className = 'kanton-note warn';
+      note.textContent = 'In diesem Kanton sind die Termine uneinheitlich. Wähle die Termine aus deinem Mietvertrag.';
+    } else {
+      $('muster').value = k.m; sichtbar();
+      note.className = 'kanton-note';
+      note.textContent = 'Vorgeschlagen: die ortsüblichen Termine im Kanton ' + this.value + '. Stehen in deinem Mietvertrag andere Termine, gelten diese.' + (k.t ? ' ' + k.t : '');
+    }
+  });
+  sichtbar();
+
+  $('rechner').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var aus = $('ausgabe');
+    var miete = parseFloat($('miete').value), neu = parse($('neu').value), eingang = parse($('eingang').value);
+    var n = parseInt($('frist').value, 10), mu = $('muster').value, beginn = parse($('beginn').value);
+    var eigen = [].slice.call(document.querySelectorAll('#eigenMonate input:checked')).map(function (c) { return +c.value; });
+    var fehler = [];
+    if (!(miete > 0)) fehler.push('die Monatsmiete');
+    if (!neu) fehler.push('das Datum der neuen Wohnung');
+    if (!eingang) fehler.push('das Eingangsdatum der Kündigung');
+    if (mu === 'dauer' && !beginn) fehler.push('den Mietbeginn');
+    if (mu === 'eigen' && !eigen.length) fehler.push('mindestens einen Monat');
+    if (fehler.length) { aus.innerHTML = '<div class="result"><p style="margin:0">Bitte gib noch ' + fehler.join(', ') + ' an.</p></div>'; return; }
+
+    var liste = termine(eingang, mu, beginn, eigen);
+    var ende = fruehesterTermin(liste, eingang, n);
+    if (!ende) { aus.innerHTML = '<div class="result"><p style="margin:0">Mit diesen Angaben liess sich kein Termin finden. Prüfe Mietbeginn und Termine.</p></div>'; return; }
+    var naechster = liste[liste.indexOf(ende) + 1];
+    var bisTag = addDays(neu, -1);
+
+    // Letzter Termin vor dem Einzug und die dafür nötige Eingangsfrist
+    var passend = null;
+    for (var i = liste.length - 1; i >= 0; i--) if (liste[i] <= bisTag) { passend = liste[i]; break; }
+
+    var html;
+    if (ende <= bisTag) {
+      html = '<div class="result ok"><p style="margin:0">Gute Nachricht</p>' +
+        '<div class="big">Keine Doppelmiete</div>' +
+        '<p>Dein Mietvertrag endet frühestens am <strong>' + fmt(ende) + '</strong>, also vor der neuen Wohnung.</p>' +
+        '<ul class="timeline"><li>Kündigung spätestens am <strong>' + fmt(spaetestens(ende, n)) + '</strong> beim Vermieter</li>' +
+        '<li>Mietende am <strong>' + fmt(ende) + '</strong></li>' +
+        (naechster ? '<li>Verpasst du den Eingang, verschiebt sich das Ende auf den ' + fmt(naechster) + '</li>' : '') + '</ul>' +
+        '<p class="fine">Kündige schriftlich und per Einschreiben. Bei einer Familienwohnung unterschreiben beide Ehegatten.</p></div>';
+      if (typeof gtag === 'function') gtag('event', 'rechner_berechnet', { doppelmiete_monate: 0 });
+    } else {
+      var mon = monateZwischen(neu, ende), betrag = mon * miete;
+      var monTxt = mon < 1.05 && mon > 0.95 ? 'rund 1 Monat' : 'rund ' + (Math.round(mon * 10) / 10).toLocaleString('de-CH') + ' Monate';
+      html = '<div class="result"><p style="margin:0">Ohne Nachmieter zahlst du doppelt</p>' +
+        '<div class="big">' + chf(betrag) + '</div>' +
+        '<p><strong>' + monTxt + '</strong>: vom ' + fmt(neu) + ' bis ' + fmt(ende) + '.</p>' +
+        '<ul class="timeline"><li>Kündigung trifft ein am ' + fmt(eingang) + '</li>' +
+        '<li>Frühestes Mietende: <strong>' + fmt(ende) + '</strong></li>' +
+        (passend ? '<li>Für ein Mietende am ' + fmt(passend) + ' hätte die Kündigung bis am ' + fmt(spaetestens(passend, n)) + ' eintreffen müssen</li>' : '') +
+        '</ul>' +
+        '<p class="fine">Das ist die Obergrenze. Vermietet der Vermieter früher weiter, wird die Miete angerechnet (Art. 264 Abs. 3 OR).</p>' +
+        '<div class="cta"><strong>Mit einem Nachmieter bist du früher raus</strong>' +
+        '<p>Schlägst du einen zumutbaren Nachmieter vor, endet deine Mietpflicht ab seiner Übernahme (Art. 264 OR). Inserat in 2 Minuten, gratis, ohne Makler, ohne Anmeldung.</p>' +
+        '<div class="stores"><a href="https://apps.apple.com/app/expresswohnung/id6761208372" data-pos="rechner" rel="noopener">App Store</a>' +
+        '<a href="https://play.google.com/store/apps/details?id=ch.expresswohnung.app" data-pos="rechner" rel="noopener">Google Play</a>' +
+        '<a href="nachmieter-finden.html#vorlagen" data-ew="zur-app" data-pos="rechner-vorlagen">Musterbriefe</a></div></div></div>';
+      if (typeof gtag === 'function') gtag('event', 'rechner_berechnet', { doppelmiete_monate: Math.round(mon) });
+    }
+    aus.innerHTML = html;
+    aus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
+  // für Tests
+  window.__EWR = { termine: termine, fruehesterTermin: fruehesterTermin, spaetestens: spaetestens, monateZwischen: monateZwischen, parse: parse, iso: iso };
+})();
+</script>
+<script>
+/* Klick-Messung GA4 (15.09.2026): Store-Knoepfe und Ratgeber-CTA */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || typeof gtag !== 'function') return;
+  var h = a.href, n = null;
+  if (/apps\.apple\.com/.test(h)) n = 'store_klick_ios';
+  else if (/play\.google\.com/.test(h)) n = 'store_klick_android';
+  else if (a.getAttribute('data-ew') === 'zur-app') n = 'ratgeber_zur_app';
+  if (n) gtag('event', n, { link_position: a.getAttribute('data-pos') || '' });
+});
+</script>
+</body>
+</html>

@@ -625,6 +625,7 @@
   </div>
   <div class="footer-links">
     <a href="nachmieter-finden.html">Ratgeber: Nachmieter finden</a>
+    <a href="kuendigungstermin-rechner.html">Doppelmiete-Rechner</a>
     <a href="agb.html">AGB</a>
     <a href="datenschutz.html">Datenschutzerklärung</a>
     <a href="impressum.html">Impressum</a>
@@ -658,5 +659,17 @@ fetch('https://urtmryplegvnaqkjffzd.supabase.co/rest/v1/inserate?select=id&laeuf
 .catch(function() {});
 </script>
 
+<script>
+/* Klick-Messung GA4 (15.09.2026): Store-Knoepfe und Ratgeber-CTA */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || typeof gtag !== 'function') return;
+  var h = a.href, n = null;
+  if (/apps\.apple\.com/.test(h)) n = 'store_klick_ios';
+  else if (/play\.google\.com/.test(h)) n = 'store_klick_android';
+  else if (a.getAttribute('data-ew') === 'zur-app') n = 'ratgeber_zur_app';
+  if (n) gtag('event', n, { link_position: a.getAttribute('data-pos') || '' });
+});
+</script>
 </body>
 </html>
