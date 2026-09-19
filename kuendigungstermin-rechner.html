@@ -193,6 +193,10 @@
   .nav-mobile a:last-child { border-bottom: 0; }
   .nav-mobile .nm-head { font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #A50E1E; padding: 14px 4px 2px; }
   @media (max-width: 640px) { .nav-burger { display: block; } }
+  /* Menüzeile auf einer Linie (19.09.2026) */
+  .nav-links { -webkit-align-items: center; align-items: center; }
+  .nav-links > a, .nav-dd-btn { white-space: nowrap; }
+  @media (max-width: 900px) { .nav-links { display: none; } .nav-burger { display: block; } }
 </style>
 </head>
 <body>
