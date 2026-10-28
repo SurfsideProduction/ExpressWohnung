@@ -499,7 +499,7 @@
       var mon = monateZwischen(neu, ende), betrag = mon * miete;
       var monTxt = mon < 1.05 && mon > 0.95 ? 'rund 1 Monat' : 'rund ' + (Math.round(mon * 10) / 10).toLocaleString('de-CH') + ' Monate';
       var ua = navigator.userAgent || '', ios = /iPhone|iPad|iPod/i.test(ua), android = /Android/i.test(ua);
-      var AS = 'https://apps.apple.com/app/expresswohnung/id6761208372', GP = 'https://play.google.com/store/apps/details?id=ch.expresswohnung.app';
+      var AS = 'https://apps.apple.com/ch/app/expresswohnung/id6761208372', GP = 'https://play.google.com/store/apps/details?id=ch.expresswohnung.app';
       var knopf = ios ? '<a class="cta-main" href="' + AS + '" data-pos="rechner" rel="noopener">Nachmieter finden – gratis inserieren</a>'
         : android ? '<a class="cta-main" href="' + GP + '" data-pos="rechner" rel="noopener">Nachmieter finden – gratis inserieren</a>'
         : '<div class="stores"><a href="' + AS + '" data-pos="rechner" rel="noopener">App Store</a><a href="' + GP + '" data-pos="rechner" rel="noopener">Google Play</a></div>';
