@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<!-- Google tag (gtag.js) — Google Analytics 4, Property "ExpressWohnung" (gleicher Tag wie index.html) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JTQYNFDYW5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JTQYNFDYW5');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.expresswohnung.ch/app">
+<title>ExpressWohnung App laden</title>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0b1f33;color:#fff;font-family:Helvetica,Arial,sans-serif;text-align:center}
+  .box{max-width:360px;padding:28px}
+  img.icon{width:96px;height:96px;border-radius:22px}
+  h1{font-size:24px;margin:16px 0 6px}
+  p{opacity:.85;line-height:1.4;margin:6px 0 20px}
+  a.btn{display:block;background:#fff;color:#111;text-decoration:none;font-weight:700;border-radius:12px;padding:14px 0;margin:10px 0}
+  small{opacity:.6;display:block;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="box">
+  <img class="icon" src="icon.png" alt="ExpressWohnung">
+  <h1>ExpressWohnung</h1>
+  <p>Lade die App, um alle Fotos zu sehen und Kontakt aufzunehmen.<br>De Schneller isch de Gschwinder.</p>
+  <a class="btn" id="ios" href="https://apps.apple.com/ch/app/expresswohnung/id6761208372">App Store (iPhone)</a>
+  <a class="btn" id="android" href="https://play.google.com/store/apps/details?id=ch.expresswohnung.app">Google Play (Android)</a>
+  <small id="hinweis"></small>
+</div>
+<script>
+(function(){
+  var ua = navigator.userAgent || '';
+  var os = /iPhone|iPad|iPod/i.test(ua) ? 'ios' : (/Android/i.test(ua) ? 'android' : 'desktop');
+  var q = new URLSearchParams(location.search);
+  var quelle = q.get('utm_source') || 'direkt';
+  var links = { ios: document.getElementById('ios'), android: document.getElementById('android') };
+  function melde(store, ziel, auto){
+    try { gtag('event', 'store_klick', { store: store, quelle: quelle, auto: auto ? 1 : 0, event_callback: function(){ if(ziel) location.href = ziel; }, event_timeout: 800 }); }
+    catch(e){ if(ziel) location.href = ziel; }
+  }
+  ['ios','android'].forEach(function(k){
+    links[k].addEventListener('click', function(e){ e.preventDefault(); melde(k, this.href, false); });
+  });
+  try { gtag('event', 'app_seite_aufgerufen', { os: os, quelle: quelle }); } catch(e){}
+  if (os === 'ios' || os === 'android') {
+    document.getElementById('hinweis').textContent = 'Du wirst zum Store weitergeleitet …';
+    setTimeout(function(){ melde(os, links[os].href, true); }, 600);
+  } else {
+    document.getElementById('hinweis').textContent = 'Am Computer: bitte die App auf dem Handy laden.';
+  }
+})();
+</script>
+</body>
+</html>
